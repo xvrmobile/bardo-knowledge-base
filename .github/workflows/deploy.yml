@@ -1,0 +1,25 @@
+name: Publish Wiki Site
+on:
+  push:
+    branches:
+      - main  # Runs every time you commit to the main branch
+
+permissions:
+  contents: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-node-version: '3.10'
+          
+      - name: Install MkDocs Material
+        run: pip install mkdocs-material
+        
+      - name: Build and Deploy Website
+        run: mkdocs gh-pages --force
