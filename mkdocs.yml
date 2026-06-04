@@ -1,0 +1,22 @@
+site_name: Bardo & Mahayana Knowledge Base
+site_description: An expandable resource on the Tibetan and Mahayana concepts of dying.
+
+theme:
+  name: material
+  palette:
+    - scheme: default
+      primary: deep orange
+      accent: amber
+  features:
+    - search.suggest
+    - search.highlight
+
+nav:
+  - Home: index.md
+  - Core Teachings: 
+    - Overview: core-teachings/placeholder.md
+  - The Dying Process:
+    - Overview: dying-process/placeholder.md
+  - Media & Links:
+    - YouTube Videos: resources/youtube-links.md
+    - Web & Books: resources/web-resources.md
