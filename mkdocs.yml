@@ -13,10 +13,7 @@ theme:
 
 nav:
   - Home: index.md
-  - Core Teachings: 
-    - Overview: core-teachings/placeholder.md
-  - The Dying Process:
-    - Overview: dying-process/placeholder.md
+  - Core Teachings: core-teachings/four-bardos.md
   - Media & Links:
     - YouTube Videos: resources/youtube-links.md
     - Web & Books: resources/web-resources.md
