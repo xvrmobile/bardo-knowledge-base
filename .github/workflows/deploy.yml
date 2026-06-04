@@ -16,10 +16,16 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.10' # Fixed parameter name here
+          python-version: '3.10'
           
       - name: Install MkDocs Material
         run: pip install mkdocs-material
         
-      - name: Build and Deploy Website
-        run: mkdocs gh-pages --force
+      - name: Build Website Static Files
+        run: mkdocs build
+        
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./site
